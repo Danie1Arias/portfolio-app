@@ -1,17 +1,38 @@
 import { Head } from '@inertiajs/react';
 import TopBar from '../components/TopBar';
+import type { TopBarConfig } from '../types/navigation';
+import githubLogo from '../assets/github_logo.svg';
+import linkedinLogo from '../assets/linkedin_logo.svg';
+
+const topBarConfig: TopBarConfig = {
+    siteName: 'Daniel Arias Cámara',
+    siteUrl: '#',
+    socialLinks: [
+        {
+            name: 'GitHub',
+            url: 'https://github.com/Danie1Arias',
+            icon: githubLogo,
+            ariaLabel: 'GitHub',
+        },
+        {
+            name: 'LinkedIn',
+            url: 'https://www.linkedin.com/in/daniel-a-2b90a811a/',
+            icon: linkedinLogo,
+            ariaLabel: 'LinkedIn',
+        },
+    ],
+    contactButton: {
+        label: 'Contact me',
+        href: '#contact',
+    },
+};
 
 export default function Home() {
     return (
         <>
             <Head title="Daniel Arias Cámara" />
             <div className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
-                <TopBar
-                    siteName="Daniel Arias Cámara"
-                    githubUrl="https://github.com/Danie1Arias"
-                    linkedinUrl="https://www.linkedin.com/in/daniel-a-2b90a811a/"
-                    contactHref="#contact"
-                />
+                <TopBar config={topBarConfig} />
 
                 <main>
                     <section id="hero" className="border-b border-neutral-200 py-20 md:py-28 dark:border-neutral-800">
@@ -109,7 +130,7 @@ export default function Home() {
 
                 <footer className="border-t border-neutral-200 py-10 dark:border-neutral-800">
                     <div className="mx-auto max-w-6xl px-4 text-sm opacity-70">
-                        © {new Date().getFullYear()} YourName. All rights reserved.
+                        © {new Date().getFullYear()} Daniel Arias Cámara. All rights reserved.
                     </div>
                 </footer>
             </div>
