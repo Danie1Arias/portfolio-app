@@ -1,22 +1,17 @@
 import { Head } from '@inertiajs/react';
+import TopBar from '../components/TopBar';
 
 export default function Home() {
     return (
         <>
             <Head title="Daniel Arias Cámara" />
             <div className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-900 dark:text-neutral-100">
-                <header className="sticky top-0 z-40 w-full border-b border-neutral-200 bg-white/80 backdrop-blur dark:border-neutral-800 dark:bg-neutral-900/70">
-                    <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-                        <a href="#hero" className="font-semibold">Daniel Arias Cámara</a>
-                        <nav className="hidden gap-6 text-sm md:flex">
-                            <a href="#about" className="hover:opacity-80">About</a>
-                            <a href="#projects" className="hover:opacity-80">Projects</a>
-                            <a href="#experience" className="hover:opacity-80">Experience</a>
-                            <a href="#skills" className="hover:opacity-80">Skills</a>
-                            <a href="#contact" className="hover:opacity-80">Contact</a>
-                        </nav>
-                    </div>
-                </header>
+                <TopBar
+                    siteName="Daniel Arias Cámara"
+                    githubUrl="https://github.com/Danie1Arias"
+                    linkedinUrl="https://www.linkedin.com/in/daniel-a-2b90a811a/"
+                    contactHref="#contact"
+                />
 
                 <main>
                     <section id="hero" className="border-b border-neutral-200 py-20 md:py-28 dark:border-neutral-800">
