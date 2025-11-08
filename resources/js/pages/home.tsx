@@ -3,6 +3,7 @@ import TopBar from '../components/TopBar';
 import type { TopBarConfig } from '../types/navigation';
 import githubLogo from '../assets/github_logo.svg';
 import linkedinLogo from '../assets/linkedin_logo.svg';
+import heroBackground from '../assets/verthyindia_cover.jpeg';
 
 const topBarConfig: TopBarConfig = {
     siteName: 'Daniel Arias Cámara',
@@ -22,7 +23,7 @@ const topBarConfig: TopBarConfig = {
         },
     ],
     contactButton: {
-        label: 'Contact me',
+        label: 'Contact Me',
         href: '#contact',
     },
 };
@@ -35,19 +36,27 @@ export default function Home() {
                 <TopBar config={topBarConfig} />
 
                 <main>
-                    <section id="hero" className="border-b border-neutral-200 py-20 md:py-28 dark:border-neutral-800">
-                        <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 md:grid-cols-2">
-                            <div>
-                                <h1 className="text-4xl font-bold tracking-tight md:text-5xl">Hi, I’m Daniel Arias Cámara</h1>
-                                <p className="mt-4 max-w-prose text-neutral-600 dark:text-neutral-300">
-                                    Short tagline about what you do and what you’re looking for.
+                    <section
+                        id="hero"
+                        className="relative border-b border-neutral-200 bg-cover bg-center bg-no-repeat py-20 md:py-28 dark:border-neutral-800"
+                        style={{
+                            backgroundImage: `url(${heroBackground})`,
+                        }}
+                    >
+                        
+                        <div className="absolute inset-0 bg-black/40 dark:bg-black/60" />
+                        <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 md:grid-cols-2">
+                            <div className="order-1 md:order-2 h-56 w-full rounded-xl bg-neutral-100/20 backdrop-blur-sm dark:bg-neutral-800/20 md:h-72" />
+                            <div className="order-2 md:order-1">
+                                <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl">Hi, I'm Daniel Arias Cámara.</h1>
+                                <p className="mt-4 max-w-prose text-white/90">
+                                    Telecommunications Engineer, with a M.Sc. in Computer Security Engineering and Artificial Intelligence.
                                 </p>
                                 <div className="mt-8 flex flex-wrap gap-3">
-                                    <a href="#projects" className="rounded-md bg-neutral-900 px-4 py-2 text-white dark:bg-white dark:text-neutral-900">View Projects</a>
-                                    <a href="#contact" className="rounded-md border border-neutral-300 px-4 py-2 dark:border-neutral-700">Contact Me</a>
+                                    <a href="#projects" className="rounded-md bg-white px-4 py-2 font-medium text-neutral-900 hover:bg-neutral-100">View Projects</a>
+                                    <a href="#contact" className="rounded-md border border-white/80 px-4 py-2 font-medium text-white hover:bg-white/10">Contact Me</a>
                                 </div>
                             </div>
-                            <div className="h-56 w-full rounded-xl bg-neutral-100 dark:bg-neutral-800 md:h-72" />
                         </div>
                     </section>
 
