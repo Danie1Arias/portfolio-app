@@ -5,6 +5,12 @@ import githubLogo from '../assets/github_logo.svg';
 import linkedinLogo from '../assets/linkedin_logo.svg';
 import heroBackground from '../assets/verthyindia_cover.jpeg';
 import profilePicture from '../assets/profile_picture.jpeg';
+import ContactButton from '../components/TopBar/ContactButton';
+
+const contactButtonConfig = {
+    label: 'Contact Me',
+    href: '#contact',
+};
 
 const topBarConfig: TopBarConfig = {
     siteName: 'Daniel Arias Cámara',
@@ -23,11 +29,10 @@ const topBarConfig: TopBarConfig = {
             ariaLabel: 'LinkedIn',
         },
     ],
-    contactButton: {
-        label: 'Contact Me',
-        href: '#contact',
-    },
+    contactButton: contactButtonConfig
 };
+
+
 
 export default function Home() {
     return (
@@ -57,7 +62,11 @@ export default function Home() {
                                 </p>
                                 <div className="mt-8 flex flex-wrap gap-3">
                                     <a href="#projects" className="rounded-md bg-white px-4 py-2 font-medium text-neutral-900 hover:bg-neutral-100">View Projects</a>
-                                    <a href="#contact" className="rounded-md border border-white/80 px-4 py-2 font-medium text-white hover:bg-white/10">Contact Me</a>
+                                    <ContactButton
+                                        label={contactButtonConfig.label}
+                                        href={contactButtonConfig.href}
+                                        variant="desktop"
+                                    />
                                 </div>
                             </div>
                         </div>
