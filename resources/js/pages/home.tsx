@@ -4,6 +4,7 @@ import type { TopBarConfig } from '../types/navigation';
 import githubLogo from '../assets/github_logo.svg';
 import linkedinLogo from '../assets/linkedin_logo.svg';
 import heroBackground from '../assets/verthyindia_cover.jpeg';
+import profilePicture from '../assets/profile_picture.jpeg';
 
 const topBarConfig: TopBarConfig = {
     siteName: 'Daniel Arias Cámara',
@@ -38,7 +39,7 @@ export default function Home() {
                 <main>
                     <section
                         id="hero"
-                        className="relative border-b border-neutral-200 bg-cover bg-center bg-no-repeat py-20 md:py-28 dark:border-neutral-800"
+                        className="relative border-b border-neutral-200 bg-cover bg-center bg-no-repeat py-10 md:py-10 dark:border-neutral-800"
                         style={{
                             backgroundImage: `url(${heroBackground})`,
                         }}
@@ -46,7 +47,9 @@ export default function Home() {
                         
                         <div className="absolute inset-0 bg-black/40 dark:bg-black/60" />
                         <div className="relative mx-auto grid max-w-6xl grid-cols-1 items-center gap-10 px-4 md:grid-cols-2">
-                            <div className="order-1 md:order-2 h-56 w-full rounded-xl bg-neutral-100/20 backdrop-blur-sm dark:bg-neutral-800/20 md:h-72" />
+                            <div className="order-1 md:order-2 flex justify-center items-center">
+                                <img src={profilePicture} alt="Daniel Arias Cámara" className="h-70 w-70 md:h-90 md:w-90 object-cover rounded-full border-2 border-black dark:border-neutral-800" />
+                            </div>
                             <div className="order-2 md:order-1">
                                 <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl">Hi, I'm Daniel Arias Cámara.</h1>
                                 <p className="mt-4 max-w-prose text-white/90">
