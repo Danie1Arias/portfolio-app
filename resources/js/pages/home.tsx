@@ -72,12 +72,29 @@ export default function Home() {
                         </div>
                     </section>
 
-                    <section id="about" className="border-b border-neutral-200 py-16 dark:border-neutral-800">
+                    <section id="about" className="border-b border-neutral-200 py-10 dark:border-neutral-800">
                         <div className="mx-auto max-w-6xl px-4">
                             <h2 className="text-2xl font-semibold">About</h2>
-                            <p className="mt-4 max-w-3xl text-neutral-600 dark:text-neutral-300">
-                                Brief bio, background, and what motivates you. You can expand this later.
+                            <p className="mt-4 max-w-6xl text-neutral-600 dark:text-neutral-300">
+                                Thank you for visiting my portfolio. Beyond my professional experience and academic background, I am passionate about science and technology, especially topics related to Artificial Intelligence. For years, I have been dedicating my efforts to the entrepreneurial field, by participating in several programs such as Explorer, powered by Santander X, aimed at improving the educational sector. My last project was the creation of a virtual English Academy. You can find more details about this project in the <i><a href='#projects'>Projects</a></i> section.
                             </p>
+                        </div>
+                    </section>
+
+                    <section id="academic" className="border-b border-neutral-200 py-10 dark:border-neutral-800">
+                        <div className="mx-auto max-w-6xl px-4">
+                            <h2 className="text-2xl font-semibold">Academic Training</h2>
+                            <ul className="mt-6 space-y-6">
+                                <li className="rounded-xl border border-neutral-200 p-4 dark:border-neutral-800">
+                                    <div className="flex items-center justify-between">
+                                        <div>
+                                            <p className="font-medium">M.Sc. in Computer Security Engineering and Artificial Intelligence</p>
+                                            <p className="text-sm text-neutral-600 dark:text-neutral-300">Universitat Rovira i Virgili</p>
+                                        </div>
+                                        <span className="text-xs opacity-70">2025</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </section>
 
