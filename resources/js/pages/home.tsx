@@ -1,16 +1,38 @@
 import { Head } from '@inertiajs/react';
 import TopBar from '../components/TopBar';
+import Card from '../components/cards/Card';
+import ContactButton from '../components/TopBar/ContactButton';
 import type { TopBarConfig } from '../types/navigation';
 import githubLogo from '../assets/github_logo.svg';
 import linkedinLogo from '../assets/linkedin_logo.svg';
 import heroBackground from '../assets/verthyindia_cover.jpeg';
 import profilePicture from '../assets/profile_picture.jpeg';
-import ContactButton from '../components/TopBar/ContactButton';
 
 const contactButtonConfig = {
     label: 'Contact Me',
     href: '#contact',
 };
+
+const academicHistory = [
+    {
+        image: 'urv_logo.png',
+        title: 'M.Sc. in Computer Security Engineering and Artificial Intelligence',
+        subtitle: 'Universitat Rovira i Virgili',
+        timeframe: '2024 - 2025',
+    },
+    {
+        image: 'urv_logo.png',
+        title: 'B.Sc. in Telecommunications Systems and Services Engineering',
+        subtitle: 'Universitat Rovira i Virgili',
+        timeframe: '2018 - 2024',
+    },
+    {
+        image: 'urv_logo.png',
+        title: 'Minor in Social Entrepreneuship and Substainable Development Goals',
+        subtitle: 'Universitat Rovira i Virgili',
+        timeframe: '2021 - 2023',
+    },
+];
 
 const topBarConfig: TopBarConfig = {
     siteName: 'Daniel Arias Cámara',
@@ -74,7 +96,7 @@ export default function Home() {
 
                     <section id="about" className="border-b border-neutral-200 py-10 dark:border-neutral-800">
                         <div className="mx-auto max-w-6xl px-4">
-                            <h2 className="text-2xl font-semibold">About</h2>
+                            <h2 className="text-2xl font-semibold">About Me</h2>
                             <p className="mt-4 max-w-6xl text-neutral-600 dark:text-neutral-300">
                                 Thank you for visiting my portfolio. Beyond my professional experience and academic background, I am passionate about science and technology, especially topics related to Artificial Intelligence. For years, I have been dedicating my efforts to the entrepreneurial field, by participating in several programs such as Explorer, powered by Santander X, aimed at improving the educational sector. My last project was the creation of a virtual English Academy. You can find more details about this project in the <i><a href='#projects'>Projects</a></i> section.
                             </p>
@@ -84,17 +106,17 @@ export default function Home() {
                     <section id="academic" className="border-b border-neutral-200 py-10 dark:border-neutral-800">
                         <div className="mx-auto max-w-6xl px-4">
                             <h2 className="text-2xl font-semibold">Academic Training</h2>
-                            <ul className="mt-6 space-y-6">
-                                <li className="rounded-xl border border-neutral-200 p-4 dark:border-neutral-800">
-                                    <div className="flex items-center justify-between">
-                                        <div>
-                                            <p className="font-medium">M.Sc. in Computer Security Engineering and Artificial Intelligence</p>
-                                            <p className="text-sm text-neutral-600 dark:text-neutral-300">Universitat Rovira i Virgili</p>
-                                        </div>
-                                        <span className="text-xs opacity-70">2025</span>
-                                    </div>
-                                </li>
-                            </ul>
+                            <div className="mt-6 space-y-4">
+                                {academicHistory.map((item) => (
+                                    <Card
+                                        key={`${item.title}-${item.timeframe}`}
+                                        imageName={item.image}
+                                        title={item.title}
+                                        subtitle={item.subtitle}
+                                        timeframe={item.timeframe}
+                                    />
+                                ))}
+                            </div>
                         </div>
                     </section>
 
