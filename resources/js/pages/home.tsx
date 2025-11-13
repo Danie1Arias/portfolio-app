@@ -28,7 +28,7 @@ const academicHistory = [
     },
     {
         image: 'urv_logo.png',
-        title: 'Minor in Social Entrepreneuship and Substainable Development Goals',
+        title: 'Minor in Social Entrepreneuship and Sustainable Development Goals',
         subtitle: 'Universitat Rovira i Virgili',
         timeframe: '2021 - 2023',
     },
