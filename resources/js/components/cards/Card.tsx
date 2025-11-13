@@ -20,12 +20,12 @@ export default function Card({ imageName, title, subtitle, timeframe }: CardProp
                     <div>
                         <h3 className="text-base font-semibold text-neutral-900 dark:text-neutral-100">{title}</h3>
                         <p className="text-sm text-neutral-600 dark:text-neutral-300">{subtitle}</p>
-                        <span className="mt-2 block text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400 sm:hidden">
+                        <span className="mt-2 block text-xs font-medium tracking-wide text-neutral-500 dark:text-neutral-400 sm:hidden">
                             {timeframe}
                         </span>
                     </div>
                 </div>
-                <span className="hidden text-xs font-medium uppercase tracking-wide text-neutral-500 dark:text-neutral-400 sm:block">
+                <span className="hidden text-xs font-medium tracking-wide text-neutral-500 dark:text-neutral-400 sm:block">
                     {timeframe}
                 </span>
             </div>

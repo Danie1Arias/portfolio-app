@@ -34,6 +34,21 @@ const academicHistory = [
     },
 ];
 
+const experienceHistory = [
+    {
+        image: 'vpt_logo.jpg',
+        title: 'Front Web Developer',
+        subtitle: 'VIAJES PARA TI S.L.',
+        timeframe: 'April 2023 - August 2024 (1 year 5 months)'
+    },
+    {
+        image: 'freshly_logo.png',
+        title: 'IT Support Specialist',
+        subtitle: 'Freshly Cosmetics',
+        timeframe: 'July 2022 - December 2022 (6 months)'
+    }
+]
+
 const topBarConfig: TopBarConfig = {
     siteName: 'Daniel Arias Cámara',
     siteUrl: '#',
@@ -120,6 +135,23 @@ export default function Home() {
                         </div>
                     </section>
 
+                    <section id="experience" className="border-b border-neutral-200 py-10 dark:border-neutral-800">
+                        <div className="mx-auto max-w-6xl px-4">
+                            <h2 className="text-2xl font-semibold">Professional Experience</h2>
+                            <div className="mt-6 space-y-4">
+                                {experienceHistory.map((item) => (
+                                    <Card
+                                        key={`${item.title}-${item.timeframe}`}
+                                        imageName={item.image}
+                                        title={item.title}
+                                        subtitle={item.subtitle}
+                                        timeframe={item.timeframe}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    </section>
+
                     <section id="projects" className="border-b border-neutral-200 py-16 dark:border-neutral-800">
                         <div className="mx-auto max-w-6xl px-4">
                             <div className="flex items-end justify-between">
@@ -143,23 +175,6 @@ export default function Home() {
                                     <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-300">Short description of the project.</p>
                                 </article>
                             </div>
-                        </div>
-                    </section>
-
-                    <section id="experience" className="border-b border-neutral-200 py-16 dark:border-neutral-800">
-                        <div className="mx-auto max-w-6xl px-4">
-                            <h2 className="text-2xl font-semibold">Experience</h2>
-                            <ul className="mt-6 space-y-6">
-                                <li className="rounded-xl border border-neutral-200 p-4 dark:border-neutral-800">
-                                    <div className="flex items-center justify-between">
-                                        <div>
-                                            <p className="font-medium">Role @ Company</p>
-                                            <p className="text-sm text-neutral-600 dark:text-neutral-300">What you did, stack, achievements.</p>
-                                        </div>
-                                        <span className="text-xs opacity-70">2023 — Present</span>
-                                    </div>
-                                </li>
-                            </ul>
                         </div>
                     </section>
 
