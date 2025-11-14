@@ -8,7 +8,7 @@ type SocialLinkProps = {
 
 export default function SocialLink({ link, variant = 'desktop', onClose }: SocialLinkProps) {
     const baseClasses = 'inline-flex items-center justify-center rounded-full border border-neutral-200 bg-white hover:bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-800 dark:hover:bg-neutral-700';
-    const iconClasses = 'h-5 w-5 brightness-0 invert';
+    const iconClasses = link.invertIcon !== false ? 'h-5 w-5 brightness-0 invert' : 'h-5 w-5';
 
     if (variant === 'mobile') {
         return (

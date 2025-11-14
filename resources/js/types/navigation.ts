@@ -3,6 +3,7 @@ export type SocialLink = {
     url: string;
     icon: string;
     ariaLabel: string;
+    invertIcon?: boolean;
 };
 
 export type TopBarConfig = {

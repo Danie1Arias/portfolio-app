@@ -4,6 +4,7 @@ import Card from '../components/cards/Card';
 import ContactButton from '../components/TopBar/ContactButton';
 import type { TopBarConfig } from '../types/navigation';
 import githubLogo from '../assets/github_logo.svg';
+import huggingfaceLogo from '../assets/huggingface.svg';
 import linkedinLogo from '../assets/linkedin_logo.svg';
 import heroBackground from '../assets/verthyindia_cover.jpeg';
 import profilePicture from '../assets/profile_picture.jpeg';
@@ -58,6 +59,13 @@ const topBarConfig: TopBarConfig = {
             url: 'https://github.com/Danie1Arias',
             icon: githubLogo,
             ariaLabel: 'GitHub',
+        },
+        {
+            name: 'Hugging Face',
+            url: 'https://huggingface.co/Danie1Arias',
+            icon: huggingfaceLogo,
+            ariaLabel: 'Hugging Face',
+            invertIcon: false,
         },
         {
             name: 'LinkedIn',
